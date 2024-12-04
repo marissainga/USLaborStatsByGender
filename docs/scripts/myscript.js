@@ -1,11 +1,11 @@
 // Example data (replace with your own dataset)
 const data = [
-  {year: 2020, job: "Engineer", men: 3000, women: 1200, median_income: 80000},
-  {year: 2020, job: "Teacher", men: 1500, women: 2500, median_income: 50000},
-  {year: 2020, job: "Nurse", men: 500, women: 4000, median_income: 60000},
-  {year: 2019, job: "Engineer", men: 2800, women: 1100, median_income: 78000},
-  {year: 2019, job: "Teacher", men: 1600, women: 2400, median_income: 48000},
-  {year: 2019, job: "Nurse", men: 600, women: 3900, median_income: 58000}
+  {year: 2020, Occupation: "Engineer", men: 3000, women: 1200, median_income: 80000},
+  {year: 2020, Occupation: "Teacher", men: 1500, women: 2500, median_income: 50000},
+  {year: 2020, Occupation: "Nurse", men: 500, women: 4000, median_income: 60000},
+  {year: 2019, Occupation: "Engineer", men: 2800, women: 1100, median_income: 78000},
+  {year: 2019, Occupation: "Teacher", men: 1600, women: 2400, median_income: 48000},
+  {year: 2019, Occupation: "Nurse", men: 600, women: 3900, median_income: 58000}
 ];
 
 // Get unique years for the slider
@@ -111,7 +111,7 @@ function updateChart(selectedYear) {
     .duration(2000)
     .attr("x", d => x(d.median_income))
     .attr("y", height + 30) // Adjust position above the axis
-    .text(d => d.job);
+    .text(d => d.Occupation);
 
   // Exit for job labels
   jobLabels.exit().remove();

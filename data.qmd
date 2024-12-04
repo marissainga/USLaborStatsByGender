@@ -133,8 +133,10 @@ df_grouped <- total_jobs %>%
     median_income = Total_MedianEarnings  # Assuming 'Total_MedianEarnings' is the column for median income
   )
 
-# Save the data as JSON file
-write_json(df_grouped, "output_data.json")
+df_grouped
+
+write.csv(df_grouped, "top_jobs_by_gender.csv", row.names = FALSE)
+
 
 ```
 
